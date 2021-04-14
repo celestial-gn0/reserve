@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="text-center">
-        <h1>Sign up</h1>
+        <h1>サインアップ</h1>
     </div>
 
     <div class="row">
@@ -39,7 +39,7 @@
                     {!! Form::text('gender','男性/女性',old('gender'),['class' => 'form-control']) !!}
                 </div>
 
-                {!! Form::submit('Sign up', ['class' => 'btn btn-primary btn-block']) !!}
+                {!! Form::submit('登録する', ['class' => 'btn btn-primary btn-block']) !!}
             {!! Form::close() !!}
         </div>
     </div>
