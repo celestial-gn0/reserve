@@ -5,6 +5,7 @@
         <div class="center jumbotron">
             <div class="text-center">
                 <h1>予約をする</h1>
+                {!! link_to_route('reservations.store', '予約をする', ['user' => Auth::id()], ['class' => 'btn btn-lg btn-primary']) !!}
             </div>
         </div>
     @else
