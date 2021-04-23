@@ -18,12 +18,14 @@
             {!! Form::open(['route' => 'Reservation.get']) !!}
                 <div class="form-group">
                     {!! Form::label('reserve_start', '開始時間') !!}
-                    {!! Form::input('datetime-local','reserve_start', old('reserve_start'), ['class' => 'form-control']) !!}
+                    {!! Form::input('date','reserve_start_date', old('reserve_start_date'), ['class' => 'form-control']) !!}
+                    {!! Form::input('time','reserve_start_time', old('reserve_start_time'), ['class' => 'form-control']) !!}
                 </div>
                 
                 <div class="form-group">
                     {!! Form::label('reserve_end', '終了時間') !!}
-                    {!! Form::input('datetime-local','reserve_end', old('reserve_end'), ['class' => 'form-control']) !!}
+                    {!! Form::input('date','reserve_end_date', old('reserve_end_date'), ['class' => 'form-control']) !!}
+                    {!! Form::input('time','reserve_end_time', old('reserve_end_time'), ['class' => 'form-control']) !!}
                 </div>
                 
                 {!! Form::submit('予約する', ['class' => 'btn btn-primary btn-block']) !!}

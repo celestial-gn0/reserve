@@ -13,7 +13,7 @@ class ReservationRule implements Rule
             $_reserve_end;
     
     /**
-     * Create a new rule instance.
+     * 新しいルールインスタンスを作成します。
      *
      * @return void
      */
@@ -24,7 +24,7 @@ class ReservationRule implements Rule
     }
 
     /**
-     * Determine if the validation rule passes.
+     * 検証ルールが通るかどうかを判断します。
      *
      * @param  string  $attribute
      * @param  mixed  $value
@@ -36,7 +36,7 @@ class ReservationRule implements Rule
     }
 
     /**
-     * Get the validation error message.
+     * バリデーションのエラーメッセージを取得します。
      *
      * @return string
      */

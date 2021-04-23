@@ -10,7 +10,7 @@ use \App\Reservation;
 
 class ReservationsController extends Controller
 {
-     public function create() {
+    public function create() {
 
         return view('users.store');
 
@@ -21,8 +21,9 @@ class ReservationsController extends Controller
         $request->user()->reservations()->create([
         'reserve_start' => $request->reserve_start,
         'reserve_end' => $request->reserve_end
-        
         ]);
-        return back()->with('result', '予約が完了しました。');
+        return back()->with('result', '予約を受け付けました。');
     }
+    
+    
 }

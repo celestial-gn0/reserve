@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/users', function () {
-    return view('users.show');
+    return view('welcome');
 });
 Route::get('/managers', function () {
     return view('managers.managers');
@@ -32,6 +32,7 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController', ['only' => ['show']]);
+    Route::resource('managers', 'ManagaersController', ['only' => ['show']]);
     Route::resource('reservations', 'ReservationsController', ['only' => ['store']]);
 });
 Route::get('reservations', 'ReservationsController@create')->name('Reservation.get'); // 入力フォーム
