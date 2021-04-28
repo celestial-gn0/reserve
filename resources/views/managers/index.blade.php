@@ -12,6 +12,7 @@
                                     <th>名前</th>
                                     <th>日時</th>
                                     <th>承認</th>
+                                    <th>削除</th>
                                 </tr>
                             </thead>
                             @if (count($reservations) > 0)
@@ -22,6 +23,13 @@
                                             <th>{!! ($reservation->user->name) !!}</th>
                                             <th>{!! ($reservation->reserve_start) !!} ~ {!! ($reservation->reserve_end) !!}</th>
                                             <th>{!! ($reservation->approval) !!}</th>
+                                            <th>
+                                                <form action="{{ route('Reservation.destroy', $reservation->id)}}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <input type="submit" name="" value="削除">
+                                                </form>
+                                            </th>
                                         </tr>
                                     </tbody>
                                 @endforeach

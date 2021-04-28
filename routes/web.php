@@ -36,4 +36,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('reservations', 'ReservationsController', ['only' => ['store']]);
 });
 Route::get('reservations', 'ReservationsController@create')->name('Reservation.get'); // 入力フォーム
-Route::get('reservations', 'ReservationsController@index')->name('Reservation.index'); 
+Route::get('reservations', 'ReservationsController@index')->name('Reservation.index');
+Route::delete('reservations', 'ReservationsController@destroy')->name('Reservation.destroy'); 
