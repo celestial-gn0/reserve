@@ -33,8 +33,5 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController', ['only' => ['show']]);
     Route::resource('managers', 'ManagaersController', ['only' => ['show']]);
-    Route::resource('reservations', 'ReservationsController', ['only' => ['store']]);
+    Route::resource('reservations', 'ReservationsController', ['only' => ['index','create', 'store','destroy']]);
 });
-Route::get('reservations', 'ReservationsController@create')->name('Reservation.get'); // 入力フォーム
-Route::get('reservations', 'ReservationsController@index')->name('Reservation.index');
-Route::delete('reservations', 'ReservationsController@destroy')->name('Reservation.destroy'); 

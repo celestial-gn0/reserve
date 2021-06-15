@@ -15,7 +15,7 @@
                 <br>
             @endif
             
-            {!! Form::open(['route' => 'Reservation.get']) !!}
+            {!! Form::open(['route' => 'reservations.store']) !!}
                 <div class="form-group">
                     {!! Form::label('reserve_start', '開始時間') !!}
                     {!! Form::input('date','reserve_start_date', old('reserve_start_date'), ['class' => 'form-control']) !!}

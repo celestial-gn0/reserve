@@ -13,7 +13,6 @@ class ReservationsController extends Controller
     public function create() {
 
         return view('users.store');
-
     }
     
     public function index()
@@ -22,7 +21,7 @@ class ReservationsController extends Controller
         if (\Auth::check()) { // 認証済みの場合
             // 認証済みユーザを取得
             $user = \Auth::user();
-            // ユーザの投稿の一覧を作成日時の降順で取得
+            // ユーザの予約の一覧を作成日時の降順で取得
             $reservations = \App\Reservation::orderBy('created_at', 'desc')->paginate(20);
             $data = [
                 'user' => $user,

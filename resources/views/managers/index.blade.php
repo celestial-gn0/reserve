@@ -24,7 +24,7 @@
                                             <th>{!! ($reservation->reserve_start) !!} ~ {!! ($reservation->reserve_end) !!}</th>
                                             <th>{!! ($reservation->approval) !!}</th>
                                             <th>
-                                                <form action="{{ route('Reservation.destroy', $reservation->id)}}" method="POST">
+                                                <form action="{{ route('reservations.destroy', $reservation->id)}}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <input type="submit" name="" value="削除">
