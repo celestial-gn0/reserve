@@ -28,8 +28,6 @@ class ReservationsController extends Controller
                 'reservations' => $reservations,
             ];
         }
-
-        // Welcomeビューでそれらを表示
         return view('managers.index', $data);
     }
     
@@ -39,7 +37,7 @@ class ReservationsController extends Controller
         'reserve_start' => $request->reserve_start,
         'reserve_end' => $request->reserve_end
         ]);
-        return back()->with('result', '予約を受け付けました。');
+        return back()->with('result', '予約を受け付けました。予約時間のメモをよろしくお願い致します。');
     }
     
     public function destroy($id)

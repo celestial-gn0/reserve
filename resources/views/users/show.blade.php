@@ -22,10 +22,4 @@
                     </tr>
                 </table>
             </div>
-        <h3>予約確認</h3>
-        　　<div class="text-center">
-        　　      <table class="table table-striped">
-                    <th>予約</th>
-        　　      </table>
-        　　</div>
 @endsection
